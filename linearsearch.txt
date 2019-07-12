@@ -1,0 +1,29 @@
+#include<stdio.h>
+int main()
+{
+        int i,flag=0,search;
+        int arr[10]=[1,2,3,4,5,6,7,8,9,10];             //array initialized
+
+        printf("Enter any number to search in array: ");
+        scanf("%d",&search);
+
+        for(i=0;i<10;++i)                               //loop from 0 to length of array
+        {
+                if(arr[i]==search)
+                {
+                        flag=1;                         //In case of match flag value updates
+                        break;                          //exit loop
+                }
+        }
+
+        if(flag==1)                                     //executes if value found in array
+        {
+                printf("%d found at position %d.",search,i+1);
+        }
+        else
+        {
+                printf("%d not found in array",search);
+        }
+
+}
+
